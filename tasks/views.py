@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from  .models import Task
 
 
 def home(request):
-    return HttpResponse("Bienvenu à TaskFlow")
-# Create your views here.
+    tasks=Task.objects.all()
+    return render(request,'tasks/task_list.html',{'tasks':tasks})
+

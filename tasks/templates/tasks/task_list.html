@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TaskFlow</title>
+    </head>
+    <body>
+        <h1>TaskFlow-Task List</h1>
+        <h3> My Tasks</h3>
+        <ul>
+            {%for task in tasks%}
+            <li>
+                {{task.title}}
+                {%if task.completed%}
+                ✅
+                {%else%}
+                ❌
+                {%endif%}
+                
+            </li>
+            {%endfor%}
+        </ul>
+    </body>
+</html>
