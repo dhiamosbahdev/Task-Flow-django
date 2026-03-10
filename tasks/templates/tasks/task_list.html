@@ -4,8 +4,15 @@
         <title>TaskFlow</title>
     </head>
     <body>
-        <h1>TaskFlow-Task List</h1>
-        <h3> My Tasks</h3>
+        <h1>TaskFlow</h1>
+        <h3> Add New Task</h3>
+        <form method ='POST'>
+            {%csrf_token%}
+            {{form}}
+            <button type="submit"> Add Task </button>
+        </form>
+        <hr>
+        <h3>My Tasks</h3>
         <ul>
             {%for task in tasks%}
             <li>
