@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Task
 from .forms import TaskForm
 def home(request):
@@ -38,3 +38,7 @@ def delete_task(request, pk):
         task.delete()
         return redirect('home')
     return render(request, 'tasks/delete_task.html', {'task': task})
+
+def task_detail(request, pk):
+    task = Task.objects.get(id=pk)
+    return render(request, 'tasks/task_detail.html', {'task': task})
