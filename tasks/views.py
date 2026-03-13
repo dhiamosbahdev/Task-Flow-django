@@ -42,3 +42,16 @@ def delete_task(request, pk):
 def task_detail(request, pk):
     task = Task.objects.get(id=pk)
     return render(request, 'tasks/task_detail.html', {'task': task})
+
+#ajax views
+
+def task_list_ajax(request):
+    tasks = Task.objects.all()
+    
+    form= TaskForm()
+    
+    context= {
+        'tasks': tasks,
+        'form': form
+    }
+    return render (request, 'tasks/task_list_ajax.html', context)
