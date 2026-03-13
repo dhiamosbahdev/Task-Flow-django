@@ -42,6 +42,7 @@ Phase 3 : API REST avec Django REST Framework
 
 ### Phase 2 – Dynamic Interaction (AJAX)
 
+- [x] AJAX preparation
 - [ ] AJAX task creation
 - [ ] AJAX task completion
 - [ ] Live task updates
