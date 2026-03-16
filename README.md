@@ -44,7 +44,7 @@ Phase 3 : API REST avec Django REST Framework
 
 - [x] AJAX preparation
 - [x] AJAX task creation
-- [ ] AJAX task completion
+- [x] AJAX task completion
 - [ ] Live task updates
 - [ ] UI improvement
 
