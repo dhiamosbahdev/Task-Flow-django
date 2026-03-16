@@ -50,7 +50,8 @@
       {% for task in tasks %}
 
       <li class="list-group-item d-flex justify-content-between align-items-center">
-
+        <input type="checkbox" class= "toggle-task" data-id="{{task.id}}" {%if task.completed%}checked{%endif%}>
+        {{task.title}}
         <div>
                 <strong><a href="{% url 'task_detail' task.pk %}">{{ task.title }}</a></strong>
 

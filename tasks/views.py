@@ -55,3 +55,10 @@ def task_list_ajax(request):
         'form': form
     }
     return render (request, 'tasks/task_list_ajax.html', context)
+
+from django.http import JsonResponse
+def toggle_task(request, pk):
+    task= Task.objects.get(id=pk)
+    task.completed = not task.completed
+    task.save()
+    return JasonResponse({"completed": task.ompleted})
